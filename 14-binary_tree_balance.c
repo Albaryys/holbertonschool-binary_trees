@@ -1,7 +1,5 @@
 #include "binary_trees.h"
 
-#include "binary_trees.h"
-
 int binary_tree_height(const binary_tree_t *tree);
 int max(int a, int b);
 
@@ -13,13 +11,16 @@ int max(int a, int b);
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
-	if (tree == NULL)
-		return (0);
+    if (tree == NULL)
+        return (0);
 
-	int left_height = binary_tree_height(tree->left);
-	int right_height = binary_tree_height(tree->right);
+    int left_height;
+    int right_height;
 
-	return (left_height - right_height);
+    left_height = binary_tree_height(tree->left);
+    right_height = binary_tree_height(tree->right);
+
+    return (left_height - right_height);
 }
 
 /**
@@ -30,13 +31,16 @@ int binary_tree_balance(const binary_tree_t *tree)
  */
 int binary_tree_height(const binary_tree_t *tree)
 {
-	if (tree == NULL)
-		return (-1);
+    if (tree == NULL)
+        return (-1);
 
-	int left_height = binary_tree_height(tree->left);
-	int right_height = binary_tree_height(tree->right);
+    int left_height;
+    int right_height;
 
-	return (1 + max(left_height, right_height));
+    left_height = binary_tree_height(tree->left);
+    right_height = binary_tree_height(tree->right);
+
+    return (1 + max(left_height, right_height));
 }
 
 /**
@@ -48,5 +52,5 @@ int binary_tree_height(const binary_tree_t *tree)
  */
 int max(int a, int b)
 {
-	return (a > b ? a : b);
+    return (a > b ? a : b);
 }
