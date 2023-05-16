@@ -1,4 +1,9 @@
-#include "binary_frees.h"
+#include "binary_trees.h"
+
+#include "binary_trees.h"
+
+int binary_tree_height(const binary_tree_t *tree);
+int max(int a, int b);
 
 /**
  * binary_tree_balance - Measure the balance factor of a binary tree
